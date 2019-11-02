@@ -1,0 +1,23 @@
+<div class="content" role="main">
+  <input type="file" class="upload" (change)="changeListener($event.target.files)">
+
+  <table datatable class="row-border hover" *ngIf="json_data.length>0">
+    <thead>
+      <tr>
+        <th>First_name</th>
+        <th>sur_name</th>
+        <th>issue_count</th>
+        <th>Date_of_birth</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of json_data">
+        <td >{{item.First_name}}</td>
+        <td >{{item.sur_name}}</td>
+        <td >{{item.issue_count}}</td>
+        <td >{{item.Date_of_birth}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
